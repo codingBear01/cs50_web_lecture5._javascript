@@ -3,21 +3,23 @@
   <head>
     <title>Hello</title>
     <script>
-      function hello() {
-        const greeting = document.querySelector('h1');
+      document.addEventListener('DOMContentLoaded', function () {
+        const form = document.querySelector('form');
 
-        if (greeting.innerHTML === 'Hello!') {
-          greeting.innerHTML = 'Good Bye!';
-        } else {
-          greeting.innerHTML = 'Hello!';
-        }
-      }
+        form.onsubmit = function () {
+          const name = document.querySelector('#name').value;
+          alert(`Hello,  ${name}!`);
+        };
+      });
     </script>
   </head>
 
   <body>
     <h1>Hello!</h1>
 
-    <button onclick="hello()">Click here</button>
+    <form>
+      <input type="text" id="name" placeholder="name" autofocus />
+      <input type="submit" value="submit" />
+    </form>
   </body>
 </html>

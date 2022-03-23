@@ -2,29 +2,11 @@
 <html lang="en">
   <head>
     <title>Counter</title>
-    <script>
-      let counter = 0;
-
-      function count() {
-        const countNum = document.querySelector('h1');
-
-        counter++;
-        countNum.innerHTML = counter;
-
-        if (counter % 10 === 0) {
-          alert(`Count is now ${counter}`);
-        }
-      }
-
-      document.addEventListener('DOMContentLoaded', function () {
-        const countButton = document.querySelector('button');
-        countButton.onclick = count;
-      });
-    </script>
+    <script src="counter.js"></script>
   </head>
 
   <body>
-    <h1>0</h1>
+    <h1></h1>
 
     <button>Count</button>
   </body>

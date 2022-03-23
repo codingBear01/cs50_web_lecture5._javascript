@@ -1,0 +1,27 @@
+<!DOCTYPE >
+<html lang="en">
+  <head>
+    <title>Colors</title>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const select = document.querySelector('select');
+        const options = document.querySelectorAll('option');
+        const hello = document.querySelector('#hello');
+
+        select.onchange = function () {
+          hello.style.color = this.value;
+        };
+      });
+    </script>
+  </head>
+
+  <body>
+    <h1 id="hello">Hello</h1>
+    <select>
+      <option value="black">black</option>
+      <option value="red">red</option>
+      <option value="blue">blue</option>
+      <option value="green">green</option>
+    </select>
+  </body>
+</html>
